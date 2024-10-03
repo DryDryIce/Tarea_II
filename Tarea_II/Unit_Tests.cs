@@ -9,7 +9,7 @@ namespace LinkedListTests
         public void AddLast_ShouldInsertAtEnd()
         {
             // Arrange
-            DoublyLinkedList list = new DoublyLinkedList();
+            ListaDoble list = new ListaDoble();
 
             // Act
             list.AddLast(1);
@@ -25,7 +25,7 @@ namespace LinkedListTests
         public void GetMiddle_ShouldReturnMiddleValue()
         {
             // Arrange
-            DoublyLinkedList list = new DoublyLinkedList();
+            ListaDoble list = new ListaDoble();
             list.AddLast(1);
             list.AddLast(2);
             list.AddLast(3);
@@ -43,7 +43,7 @@ namespace LinkedListTests
         public void InsertInOrder_ShouldMaintainSortedOrder()
         {
             // Arrange
-            DoublyLinkedList list = new DoublyLinkedList();
+            ListaDoble list = new ListaDoble();
 
             // Act
             list.InsertInOrder(5);
@@ -59,8 +59,8 @@ namespace LinkedListTests
         public void MergeSorted_ShouldMergeInAscendingOrder()
         {
             // Arrange
-            DoublyLinkedList listA = new DoublyLinkedList();
-            DoublyLinkedList listB = new DoublyLinkedList();
+            ListaDoble listA = new ListaDoble();
+            ListaDoble listB = new ListaDoble();
             listA.AddLast(1);
             listA.AddLast(5);
             listA.AddLast(10);
@@ -70,7 +70,7 @@ namespace LinkedListTests
             listB.AddLast(12);
 
             // Act
-            DoublyLinkedList.MergeSorted(listA, listB, SortDirection.Asc);
+            ListaDoble.MergeSorted(listA, listB, SortDirection.Asc);
 
             // Assert
             Assert.AreEqual(1, listA.Head.Value);
@@ -82,8 +82,8 @@ namespace LinkedListTests
         public void MergeSorted_ShouldMergeInDescendingOrder()
         {
             // Arrange
-            DoublyLinkedList listA = new DoublyLinkedList();
-            DoublyLinkedList listB = new DoublyLinkedList();
+            ListaDoble listA = new ListaDoble();
+            ListaDoble listB = new ListaDoble();
             listA.AddLast(1);
             listA.AddLast(5);
             listA.AddLast(10);
@@ -93,7 +93,7 @@ namespace LinkedListTests
             listB.AddLast(12);
 
             // Act
-            DoublyLinkedList.MergeSorted(listA, listB, SortDirection.Desc);
+            ListaDoble.MergeSorted(listA, listB, SortDirection.Desc);
 
             // Assert
             Assert.AreEqual(12, listA.Head.Value);
@@ -105,7 +105,7 @@ namespace LinkedListTests
         public void Invert_ShouldReverseTheList()
         {
             // Arrange
-            DoublyLinkedList list = new DoublyLinkedList();
+            ListaDoble list = new ListaDoble();
             list.AddLast(1);
             list.AddLast(2);
             list.AddLast(3);
