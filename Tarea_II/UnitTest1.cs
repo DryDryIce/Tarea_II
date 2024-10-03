@@ -22,14 +22,14 @@ namespace LinkedListTests
         }
     }
 
-    public class DoublyLinkedList
+    public class ListaDoble
     {
         public DoublyLinkedListNode Head { get; private set; }
         public DoublyLinkedListNode Tail { get; private set; }
         private DoublyLinkedListNode Middle { get; set; }  // Referencia al nodo medio
         private int Count { get; set; }  // Contador de nodos
 
-        public DoublyLinkedList()
+        public ListaDoble()
         {
             Head = null;
             Tail = null;
@@ -107,7 +107,7 @@ namespace LinkedListTests
 
 
         // Método para mezclar dos listas en orden ascendente o descendente y actualizar el nodo central
-        public static void MergeSorted(DoublyLinkedList listA, DoublyLinkedList listB, SortDirection direction)
+        public static void MergeSorted(ListaDoble listA, ListaDoble listB, SortDirection direction)
         {
             if (listA == null || listB == null)
             {
